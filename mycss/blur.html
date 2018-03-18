@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css毛玻璃效果</title>
+    <style>
+      .blur-wrapper{
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 99vh;
+          position: relative;
+          background-image: url('images/bg.jpg');
+          background-position: center top;
+          background-size: cover;
+      }
+      .content {
+          color: #ffffff;
+          margin: 30px;
+        width:200px;
+        height: 150px;
+        position: absolute;
+        overflow: hidden;
+        z-index: 1;
+        box-sizing: border-box;
+    }
+    .content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -ms-filter: blur(5px);
+        -o-filter: blur(5px);
+        filter: blur(5px);
+        z-index: -1;
+        margin: -30px;
+        background-image: url('images/bg.jpg');
+        background-position: center top;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .content + .content {
+        left: 250px;
+    }
+    .blur-color{
+        background-color: #4b6e985e;
+        width: 100%;
+        height: 100%;
+        padding: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div class="blur-wrapper">
+       <div class="content">
+         <div class="blur-color">
+             广发积分积分
+         </div>
+       </div>
+       <div class="content">
+        <div class="blur-color">
+            广发积分积分
+        </div>
+      </div>
+    </div>
+</body>
+</html>
