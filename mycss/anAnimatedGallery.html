@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+        @import url('https://fonts.googleapis.com/css?family=Raleway:200');
+                h1 {
+        text-align: center;
+        font-family: Raleway;
+        color: #34495e;
+        }
+        .container {
+        display: flex;
+        justify-content: center;
+        }
+
+
+        div.item {
+        position: relative;
+        float: left;
+        overflow: hidden;
+        margin: 10px 1%;
+        min-width: 220px;
+        max-width: 310px;
+        width: 100%;
+        background: #000000;
+        text-align: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+
+        div.item * {
+        box-sizing: border-box;
+        }
+
+        div.item img {
+        max-width: 100%;
+        vertical-align: top;
+        height: 210px;
+        }
+
+        div.item i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        font-size: 34px;
+        color: #000000;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        background: #ffffff;
+        }
+
+        div.item a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        }
+
+        div.item.blue {
+        background-color: #34495e;
+        }
+        div.item.blue i {
+        color: #34495e;
+        }
+        div.item.red {
+        background-color: #e74c3c;
+        }
+        div.item.red i {
+        color: #e74c3c;
+        }
+
+        div.item.green {
+        background-color: #16a085;
+        }
+        div.item.green i {
+        color: #16a085;
+        }
+        div.item:hover img{
+            opacity: 0.3;
+            filter: grayscale(100%);
+        }
+        div.item * {
+            transition: all 0.35s ease-in-out;
+        }
+        div.item i {
+            transform: translate(-50%,-50%) scale(0);
+            transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        }
+        div.item:hover i{
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .item{
+            transition:transform 1s;
+        }
+    </style>
+</head>
+<body>
+    <h1>An Image Gallery</h1>
+    <div class="container">
+    <div class="item red">
+        <img src="https://preview.ibb.co/gQbzQ5/colt_steele_firemarshall.jpg"/>
+        <i class="fa fa-camera"></i>
+    </div>
+    
+    <div class="item blue">
+        <img src="images/1.jpg"/>
+        <i class="fa fa-paw"></i>
+    </div>
+    
+    <div class="item green">
+        <img src="images/2.jpg"/>
+        <i class="fa fa-cloud"></i>
+    </div>
+      
+      </div> 
+</body>
+</html>
