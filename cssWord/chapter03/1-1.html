@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>block水平元素与清除浮动实例页面</title>
+  <style>
+    .box {
+      padding: 10px;
+      background-color: #614506
+    }
+    .box > img {
+      float: left;
+    }
+    .box::after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="box clear">
+    <img src="images/1.png">
+  </div>
+</body>
+</html>
