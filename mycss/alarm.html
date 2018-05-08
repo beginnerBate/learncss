@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>alarm by css</title>
+  <style>
+    @keyframes myfirst {
+      from { 
+        transform: scale(1.4);
+
+        opacity: 0.9;
+        }
+      to {
+        transform: scale(0.7);
+        opacity: 0.5;
+      }
+    }
+    .div-wrapper{
+      width: 160px;
+      height: 155px;
+      margin: 0 auto;
+      background-color: turquoise;
+      display: flex;
+      /* align-items: center; */
+      justify-content: center;
+    }
+    .alarm-icon{
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+      transform: scale(.25);
+      transform-origin: center bottom;
+    }
+    .alarm-icon i {
+      display: inline-block;
+    }
+    .alarm-icon>.light{
+      position: absolute;
+      width: 10px;
+      height: 30px;
+      border-radius: 10px;
+      background-color:yellow;
+    }
+    .alarm-icon>.light:first-child{
+      transform-origin: 0% 100%;
+      top:0;
+      left: 10px;
+      transform: rotate(-45deg);
+    }
+    .alarm-icon>.light:nth-child(2){
+      top:-6px;
+      left: 25px;
+    }
+    .alarm-icon>.light:nth-child(3){
+      top:0;
+      right: 10px;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+    .alarm-icon>.main{
+      position: absolute;
+      top:30px;
+      width: 60px;
+      height: 65px;
+      background: lightcoral;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+    .alarm-icon>.bottom{
+      position: absolute;
+      top:95px;
+      left: -10px;
+      width: 80px;
+      height: 25px;
+      background: #314A5E;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .myanimate{
+      /* background: orangered; */
+      width: 119px;
+      height: 120px;
+      border-radius: 50%;
+      animation: myfirst 1.5s ease infinite;
+      filter: blur(25px);
+      /* transform: translate(50%,50%); */
+      left: -31px;
+      top: 7px;
+      position: absolute;
+      background: orangered;
+    }
+  </style>
+</head>
+<body>
+  <div class="div-wrapper">
+      <span class="alarm-icon">
+          <i class="light"></i>
+          <i class="light"></i>
+          <i class="light"></i>
+          <i class="main"></i>
+          <i class="bottom"></i>
+          <i class="myanimate"></i>
+        </span>
+  </div>
+</body>
+</html>
