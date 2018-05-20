@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首选最小宽度 与凹凸效果实例页面</title>
+  <style>
+    .ao,
+    .tu{
+      display: inline-block;
+      width:0;
+      font-size:14px;
+      line-height:18px;
+      margin: 35px;
+      color:#fff;
+    }
+    .ao:before,
+    .tu:before{
+      outline:2px solid #cd0000;
+      font-family: Consolas, Monaco, monospace;
+    }
+    .ao::before{
+      content:'love你love';
+    }
+    .tu{
+      direction: rtl;
+    }
+    .tu:before{
+      content:"我love你"
+    }
+  </style>
+</head>
+<body>
+  <span class="ao"></span>
+  <span class="tu"></span>
+</body>
+<script>
+  function createPop (type, text) {
+    var o = new  Object()
+    o.content = text
+    o.show = function () {
+      // 显示方法
+    }
+    if  (type == 'alert') {
+      // 警示框差异部分
+    }
+    if  (type == 'prompt') {
+      // 提示框框差异部分
+    }
+    if  (type == 'confirm') {
+      // 确认框差异部分
+    }
+    return o
+  }
+  var userNameAlert = createPop('alert', '啦啦啦啦')
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>按钮元素"包裹性"示意实例页面</title>
+  <style>
+    .box {
+      padding: 10px;
+      background-color:#cd0000;
+      text-align:center;
+    }
+    .content{
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p id="conMore" class="content">文字内容</p>
+  </div>
+  <!-- 按钮 -->
+  <p><button id="btnMore">更多文字</button></p>
+</body>
+<script>
+  var btn = document.getElementById('btnMore')
+  var content = document.getElementById('conMore')
+  if (btn && content) {
+    btn.onclick = function () {
+      content.innerHTML += '-新增文字'
+    }
+  }
+</script>
+</html>
