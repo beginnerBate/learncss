@@ -1,0 +1,52 @@
+/* 按钮基础样式 */
+.btn{
+  color:#f1f1f1;
+  font-size: 16px;
+  letter-spacing: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  border:1px solid;
+  padding: 6px 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: rgb(19, 150, 19,0.8)
+}
+.btn:disabled{
+  color: #fff;
+  background: rgb(19, 150, 19,0.6);
+  cursor: no-drop;
+}
+.btn:active{
+  color: #fff;
+  background: rgb(19, 150, 19,1)
+}
+/* 信息按钮 */
+.btn.info{
+  background: rgb(169, 169, 169, 0.8);
+}
+.btn.info:disabled{
+  background: rgb(169, 169, 169, 0.6);
+}
+.btn.info:active{
+  background: rgb(169, 169, 169);
+}
+/* 警告按钮 */
+.btn.warning{
+  background: rgba(212, 141, 7, 0.8);  
+}
+.btn.warning:active{
+  background: rgba(212, 141, 7, 1);
+}
+.btn.warning:disabled{
+  background: rgba(212, 141, 7, 0.6);
+}
+/* 危险按钮 */
+.btn.danger{
+  background: rgb(214, 103, 112,0.8);  
+}
+.btn.danger:active{
+  background: rgb(214, 103, 112);
+}
+.btn.danger:disabled{
+  background: rgb(214, 103, 112,0.6);
+}
