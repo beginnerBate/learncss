@@ -9,26 +9,26 @@
   padding: 6px 18px;
   border-radius: 4px;
   box-sizing: border-box;
-  background: rgb(19, 150, 19,0.8)
+  background: rgba(19, 150, 19,0.8)
 }
 .btn:disabled{
   color: #fff;
-  background: rgb(19, 150, 19,0.6);
+  background: rgba(19, 150, 19,0.6);
   cursor: no-drop;
 }
 .btn:active{
   color: #fff;
-  background: rgb(19, 150, 19,1)
+  background: rgba(19, 150, 19,1)
 }
 /* 信息按钮 */
 .btn.info{
-  background: rgb(169, 169, 169, 0.8);
+  background: rgba(169, 169, 169, 0.8);
 }
 .btn.info:disabled{
-  background: rgb(169, 169, 169, 0.6);
+  background: rgba(169, 169, 169, 0.6);
 }
 .btn.info:active{
-  background: rgb(169, 169, 169);
+  background: rgba(169, 169, 169,1);
 }
 /* 警告按钮 */
 .btn.warning{
@@ -42,11 +42,11 @@
 }
 /* 危险按钮 */
 .btn.danger{
-  background: rgb(214, 103, 112,0.8);  
+  background: rgba(214, 103, 112,0.8);  
 }
 .btn.danger:active{
-  background: rgb(214, 103, 112);
+  background: rgba(214, 103, 112,1);
 }
 .btn.danger:disabled{
-  background: rgb(214, 103, 112,0.6);
+  background: rgba(214, 103, 112,0.6);
 }
