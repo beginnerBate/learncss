@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>字符串拼接</title>
+</head>
+<body>
+  <div>
+    <ul id="list">
+    </ul>
+  </div>
+</body>
+<script>
+  window.onload = function () {
+    let listEle = document.querySelector("#list")
+    var HTML = ''
+    for (var i=0;i<10;i++) {
+        HTML += '<li class="cd_box">'+				
+					'<div class="po_top"><img src="img/cd_po1.png"></div>'+
+					'<div class="po_bottom">'+
+							'<div class="cd_name">虾兵蟹将</div>'+
+							'<div class="cd_price">￥56</div>'+
+							'<div class="cd_nubchoose"><a href="#" class="cd_add"></a></div>'+						
+				'</div>'+
+        '</li>'
+    }
+    listEle.innerHTML = HTML
+  }
+</script>
+</html>
