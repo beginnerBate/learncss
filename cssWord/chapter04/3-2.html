@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>margin负值与等高布局实例页面</title>
+  <style>
+    .con{
+      margin: auto;
+    max-width: 600px;
+    overflow: hidden;
+    }
+    .column-left,
+    .column-right{
+    width: 50%;
+    float: left;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+    color: #fff;
+    }
+    .column-left{
+      background-color: darkblue;
+    }
+    .column-right{
+      background-color: darkgray;
+    }
+  </style>
+</head>
+<body>
+  <div class="con">
+      <div id="colLeft" class="column-left"> 
+          <h4>正方观点</h4>
+          <p>观点1</p>
+        </div>
+        <div id="colRight" class="column-right">
+          <h4>反方观点</h4>
+          <p>观点1</p>
+        </div>
+  </div>
+<div class="con">
+    <input type="button" value="更多正方观点" id="leftMore">
+    <input type="button" value="更多反方观点" id="rightMore">
+</div>
+
+</body>
+<script>
+  var $ = function(id) {
+    return document.getElementById(id)
+  }
+  // 分栏元素
+  var colLeft = $('colLeft'), colRight = $('colRight')
+  // 分栏按钮
+  var leftMore = $('leftMore'), rightMore = $('rightMore')
+
+  // 序号
+  var indexLeft = 1, indexRight = 0;
+
+  if(colLeft && colRight && leftMore && rightMore) {
+    leftMore.onclick = function () {
+      indexLeft = indexLeft + 1;
+      colLeft.insertAdjacentHTML('beforeend','<p> 观点'+indexLeft+'</p>')
+    }
+    rightMore.onclick = function () {
+      indexRight = indexRight + 1;
+      colRight.insertAdjacentHTML('beforeend','<p> 观点'+indexRight+'</p>')
+    }
+  }
+</script>
+</html>

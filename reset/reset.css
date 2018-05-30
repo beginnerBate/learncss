@@ -1,0 +1,13 @@
+/* css reset */
+/* 关于图片 */
+img{
+  display: inline-block;
+}
+/* button */
+button{
+  padding: 0;
+  visibility: visible;
+}
+button::-moz-focus-inner{
+  padding: 0;
+}

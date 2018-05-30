@@ -9,7 +9,8 @@
   padding: 6px 18px;
   border-radius: 4px;
   box-sizing: border-box;
-  background: rgba(19, 150, 19,0.8)
+  background: rgba(19, 150, 19,0.8);
+  display: inline-block;
 }
 .btn:disabled{
   color: #fff;
@@ -49,4 +50,9 @@
 }
 .btn.danger:disabled{
   background: rgba(214, 103, 112,0.6);
+}
+/* label */
+#btn{
+  position: absolute;
+  clip: rect(0 0 0 0);
 }

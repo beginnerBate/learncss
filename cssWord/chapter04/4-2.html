@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>优雅增加点击区域之搜索框清除按钮实例页面</title>
+  <style>
+  input[type="search"]{
+    width:200px;
+    height: 40px;
+    padding:10px 40px 10px 10px;
+    border:1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .icon-clear{
+    width: 16px;
+    height: 16px;
+    margin:1px 0 0 -38px;
+    border-radius: 50%;
+    border:11px solid transparent;
+    background: #999;
+    color:white;
+    position: absolute;
+    visibility: hidden;
+  }
+  .icon-clear::before{
+    content: '×';
+  }
+  input:valid + .icon-clear{
+    visibility: visible;
+  }
+  </style>
+</head>
+<body>
+  <input type="search" name="search" id="search" value="我是初始值" required>
+  <label for="search" class="icon-clear"></label>
+</body>
+<script>
+  var eleLabel = document.querySelector('label[for="search"]'),
+  eleSearch = document.getElementById('search')
+
+  if(eleLabel && eleSearch) {
+    eleLabel.onclick = function() {
+      eleSearch.value = ''
+    }
+  }
+</script>
+</html>

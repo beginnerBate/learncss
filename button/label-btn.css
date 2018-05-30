@@ -1,0 +1,63 @@
+.label-btn{
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+.label-btn + label{
+  display: inline-block;
+  line-height: 20px;
+  color:#f1f1f1;
+  font-size: 16px;
+  letter-spacing: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  border:1px solid;
+  padding: 6px 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: rgba(19, 150, 19,0.8);
+  cursor: pointer;
+}
+.label-btn:disabled + label{
+  display: inline-block;
+  line-height: 20px;
+  color:#f1f1f1;
+  font-size: 16px;
+  letter-spacing: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  border:1px solid;
+  padding: 6px 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: rgba(19, 150, 19,0.6);
+  cursor: no-drop;
+}
+.label-btn:disabled:active + label{
+  display: inline-block;
+  line-height: 20px;
+  color:#f1f1f1;
+  font-size: 16px;
+  letter-spacing: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  border:1px solid;
+  padding: 6px 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: rgba(19, 150, 19,0.6);
+  cursor: no-drop;
+}
+.label-btn:active + label{
+  display: inline-block;
+  line-height: 20px;
+  color:#fff;
+  font-size: 16px;
+  letter-spacing: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  border:1px solid;
+  padding: 6px 18px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: rgba(19, 150, 19,1);
+}

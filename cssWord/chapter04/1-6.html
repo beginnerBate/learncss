@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>content 生成内容无法影响：empty伪类元素实例页面</title>
+  <style>
+    .box{
+      width: 216px;
+      padding: 10px;
+      border:10px solid #cd0000;
+      margin:auto;
+    }
+    .box:empty{
+      border-style: dashed;
+    }
+  </style>
+</head>
+<body>
+  <h4>有内容</h4>
+  <div class="box"> 有内容 </div>
+  <h4>没有内容</h4>
+  <div class="box"></div>
+  <h4>空格也算内容</h4>
+  <div class="box"> </div>
+  <h4>伪元素不算内容</h4>
+  <div class="box pseudo"></div>
+</body>
+</html>

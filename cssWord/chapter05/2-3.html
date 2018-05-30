@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>行高行距与文字排版关系示意实例页面</title>
+  <style>
+  .test{
+    display: inline-block;
+    font-family: simsun;
+    font-size: 24px;
+    background-color:yellow;
+  }
+  .test > span {
+    outline: 1px solid red;
+  }
+  .test > span:first-child:after{
+    content: "\A";
+    white-space: pre;
+  }
+  .test-1{
+    line-height: 2;
+  }
+  .test-2{
+    line-height: 1;
+  }
+  .test-3{
+    line-height: .5;
+  }
+  </style>
+</head>
+<body>
+  <div class="test test-1">
+    <span>第一行</span><br><span>第二行</span>
+  </div>
+  <div class="test test-2">
+    <span>第一行</span><br><span>第二行</span>
+  </div>
+  <div class="test test-3">
+    <span>第一行</span><br><span>第二行</span>
+  </div>
+</body>
+</html>
