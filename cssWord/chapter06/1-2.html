@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>利用float破坏流特性的两栏自适应布局实例页面</title>
+  <style>
+    .father{
+      overflow: hidden;
+      border:solid;
+    }
+    .father > img {
+      width: 60px;
+      height: 64px;
+      float:left;
+    }
+    .father > .right{
+      margin-left: 70px;
+    }
+    .prev{
+      float: left;
+    }
+    .next{
+      float: right;
+    }
+    .title{
+      margin:0 70px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <img src="image/1.jpg" alt="">
+    <p class="right">原理其实很简单，.animal 元素没有浮动，也没有设置宽度，因此，流动性保持得很好，
+      设置margin-left、border-left或者padding-left都可以自动改变content box的尺寸，
+      继而实现了宽度自适应布局效果。</p>
+  </div>
+
+  <div class="box">
+    <a class="prev">&laquo; 上一章</a>
+    <a class="next">下一章 &laquo;</a>
+    <h3 class="title">1112张 动物</h3>
+  </div>
+</body>
+</html>

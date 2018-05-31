@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>“无依赖绝对定位”与超越常规布局的排版实例页面</title>
+  <style>
+    .regist-box{
+      width:356px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .regist-label {
+    width: 70px;
+    padding-top: 10px;
+    float: left;
+   }
+    .regist-cell {
+    display: table-cell;
+    }
+    .regist-input {
+    height: 20px;
+    line-height: 20px;
+    width: 260px;
+    padding: 9px 5px;
+    border: 1px solid #d0d6d9;
+    vertical-align: top;
+}
+    .icon-warn{
+      position: absolute;
+      margin-left:-18px;
+      width:16px;
+      height:20px;
+      background: url('image/warn.gif') no-repeat center;
+    }
+    .regist-star{
+      position: absolute;
+      margin-left: -1em;
+      font-family: simsun;
+      color:#f30;
+    }
+    .regist-remark{
+      position: absolute;
+      margin:10px 0 0 10px;
+      color:#666;
+    }
+    .regist-warn{
+      padding-left:16px; 
+      color:#be0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="regist-box">
+    <div class="regist-group">
+      <label class="regist-label"><span class="regist-star">*</span>邮箱</label>
+      <div class="regist-cell">
+        <!-- 此处不能换行 -->
+        <input type="email" class="regist-input"><span class="regist-remark regist-warn">
+          <i class="icon-warn"></i> 邮箱格式错误
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

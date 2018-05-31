@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>使用vertical-align数值实现文字和小图标对齐实例页面</title>
+  <style>
+    .icon-arrow{
+      display: inline-block;
+      width:20px;
+      height: 20px;
+      background: url('image/arrow.svg') no-repeat center/20px 20px;
+    }
+    .valign-1{
+      vertical-align: middle;
+    }
+    .valign-2{
+      vertical-align: -5px;
+    }
+  </style>
+</head>
+<body>
+<p>请选择<i class="icon-arrow"></i></p>
+<p>请选择<i class="icon-arrow valign-1"></i></p>
+<p>请选择<i class="icon-arrow valign-2"></i></p>
+</body>
+</html>

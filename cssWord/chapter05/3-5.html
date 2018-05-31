@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>图片底部留有间隙的问题实例页面</title>
+  <style>
+    .box{
+      width: 280px;
+      outline: 1px solid #aaa;
+    }
+    .box img{
+      height: 96px;
+      width: 150px;
+    }
+    /* 间隙清楚法 */
+    .box-1 img{
+      display: block;
+      margin: 0;
+    }
+    .box-2{
+      line-height: 0;
+    }
+    .box-3{
+      font-size: 0;
+    }
+    .box-4 img{
+      vertical-align: bottom;
+    }
+  </style>
+</head>
+<body>
+  <h4>间隙示意:</h4>
+  <div class="box">
+    <img src="image/2.jpg">
+  </div>
+  <h4>图片block块状清楚间隙:</h4>
+  <div class="box box-1">
+    <img src="image/2.jpg">
+  </div>
+  <h4>图片font-size:0清楚间隙:</h4>
+  <div class="box box-2">
+    <img src="image/2.jpg">
+  </div>
+  <h4>图片vertical-align设置清楚间隙:</h4>
+  <div class="box box-3">
+    <img src="image/2.jpg">
+  </div>
+</body>
+</html>
