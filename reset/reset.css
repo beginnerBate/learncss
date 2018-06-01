@@ -11,3 +11,6 @@ button{
 button::-moz-focus-inner{
   padding: 0;
 }
+/* 网页字体 */
+html { font: menu; }
+body { font-size: 16px; }

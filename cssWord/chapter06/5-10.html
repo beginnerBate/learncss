@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>text-align实现的右外侧定位效果实例页面</title>
+  <style>
+    .constr{
+      width:80%;
+      margin:auto;
+      background-color:fuchsia;
+    }
+    .alignright{
+      height: 0;
+      text-align: right;
+      overflow: hidden;
+    }
+    .alignright::before{
+      content: '\2002';
+    }
+    .follow{
+      position:fixed;
+      bottom:100px;
+      z-index: 1;
+    }
+    .follow>img{
+      display: block;
+      margin:10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="constr">
+    <div class="alignright">
+      <span class="follow">
+        <img src="image/circle.png">
+        <img src="image/backtop.png">
+      </span>
+    </div>
+  </div>
+</body>
+</html>

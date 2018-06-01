@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>无依赖绝对定位”与下拉列表定位实例页面</title>
+  <style>
+    .search-box{
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .search-input{
+      width: 200px;
+      height:20px;
+      line-height: 20px;
+      margin:0;
+      padding:9px 39px 9px 9px;
+      border:1px solid #ddd;
+      transition: border-color .15s;
+    }
+    /* 搜索按钮*/
+    .search-btn{
+      width: 20px;
+      height: 20px;
+      border:9px solid #fff;
+      background:#ddd url('image/search.png') no-repeat center;
+      position: absolute;
+      text-indent: -9em;
+      margin:1px 0 0 -40px;
+      transition: background .15s;
+      overflow: hidden;
+    }
+    .search-result{
+      display: none;
+    }
+    /* 下拉列表 */
+    .search-datalist{
+      position: absolute;
+      width:248px;
+      border:1px solid #e6e8e9;
+      background-color:#fff;
+      box-shadow: 0px 1px 2px #d5d7d8;
+      text-align: left;
+      z-index: 1;
+    }
+    .search-datalist >a {
+      display: block;
+      line-height: 36px;
+      padding-left:12px;
+      color:#5e5e5e;
+      text-decoration: none;
+    }
+    .search-input:focus ~ .search-result{
+      display: block
+    }
+                                                                                 
+  </style>
+</head>
+<body>
+  <div class="search-box">
+    <input class="search-input" placeholder="搜索"> <a href="javascript:" class="search-btn">搜索</a>
+    <div class="search-result">
+      <div class="search-datalist"> 
+        <a href>搜索结果5</a>
+        <a href>搜索结果6</a>
+        <a href>搜索结果7</a>
+        <a href>搜索结果8</a>
+        <a href>搜索结果9</a>
+        <a href>搜索结果10</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

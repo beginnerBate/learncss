@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>text-align和absolute定位全兼容版本实例页面</title>
+  <style>
+   p{
+     width:500px;
+     height:120px;
+     background-color: goldenrod;
+     text-align: center;
+   }
+   img{
+     position: absolute;
+   }
+   /* IE兼容处理 */
+   .compa{
+     font-size: .1px;
+     font-size: -webkit-calc(1px - 1px)
+   }
+   .compa::before{
+     content: '\2002';
+   }
+  </style>
+</head>
+<body>
+  <h4>全兼容版本</h4>
+  <p class="compa"><img src="image/1.jpg" width="200px" height="100px"></p>
+</body>
+</html>
